@@ -15,3 +15,11 @@ async function getQuotes() {
     let res = await (await fetch('https://qtgen.herokuapp.com/api/prefix', options)).json();
     document.querySelector('#machineGen').innerHTML = res.quote;
 }
+
+function tog() {
+    if (document.querySelector('#getUserStr').value.length === 0) {
+        document.querySelector('#btn').innerHTML = 'Randomize';
+    } else {
+        document.querySelector('#btn').innerHTML = 'Continue my quote';
+    }
+}
