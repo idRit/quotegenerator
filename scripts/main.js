@@ -3,8 +3,8 @@ async function getQuotes() {
     let body = { str: "" };
     if (!(typeof str === 'undefined' || str === null || str.length === 0)) {
         body.str = str;
-        document.querySelector('#machineGen').innerHTML = "Please wait!";
     }
+    document.querySelector('#machineGen').innerHTML = "Please wait!";
     let options = {
         method: 'POST',
         headers: {
